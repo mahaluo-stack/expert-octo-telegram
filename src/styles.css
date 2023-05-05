@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100vh; max-height: 100vh; overflow: none; width: 100vw; max-width: 100vw; background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%); }
+body { margin: 0; padding: 0; font-family: 'Inconsolata', monospace !important }

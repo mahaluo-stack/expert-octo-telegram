@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { CurrentUserService } from './core/services/current.user.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nutrition';
+
+  constructor(
+    private currentUserService: CurrentUserService
+  ) {
+    this.currentUserService.setCurrentUser(localStorage.getItem('rememberMe') ? localStorage.getItem('rememberMe') : "");
+  }
+
 }
