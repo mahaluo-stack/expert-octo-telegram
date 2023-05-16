@@ -1,0 +1,5 @@
+<div class="container">
+    <input [(ngModel)]="searchString" (input)="handleChange()"  #searchInput class="searchBar" placeholder="search.. " [id]="opened" type="text" />
+    <div (click)="handleToggle()" class="searchIcon" *ngIf="opened === 'closed'" [style.background-image]="'url(/assets/img/appIcon/searchIcon.svg)'"></div>
+    <div (click)="handleToggle()" class="closeIcon" *ngIf="opened === 'opened'" [style.background-image]="'url(/assets/img/appIcon/closeIcon.svg)'"></div>
+</div>

@@ -1,0 +1,17 @@
+<div class="pokemonGrid">
+    <div class="pokemonCard" *ngFor="let pokemon of pokemonArr">
+        <div class="pokemonCardBackground" *ngIf="pokemon.wholeType.length > 1" id="double"
+            [style.background-image]="'url('+pokemon.wholeType[0]['iconPath']+'), url('+pokemon.wholeType[1]['iconPath']+')'">
+        </div>
+        <div class="pokemonCardBackground" *ngIf="pokemon.wholeType.length === 1" id="single"
+            [style.background-image]="'url('+pokemon.wholeType[0]['iconPath']+')'">
+        </div>
+        <div class="pokemonCardBody">
+            <p style="padding: 0; margin: 10px 0 0 10px; font-size: medium; font-weight: bold;">{{pokemon.name}} - {{pokemon.cp}}cp</p>
+            <p style="padding: 0; margin: 10px 0 0 10px;">{{pokemon.bestMoves['fastMove']}}</p>
+            <p style="padding: 0; margin: 10px 0 0 10px;">{{pokemon.bestMoves['chargeMove']}}</p>
+            <p style="padding: 0; margin: 10px 0 0 10px;">{{pokemon.bestMoves['dps'] | number:'1.1'}}dps</p>
+        </div>
+        <div class="pokemonImage" [style.background-image]="'url(assets/img/pokemonImg/'+pokemon.img[0]+')'"></div>
+    </div>
+</div>

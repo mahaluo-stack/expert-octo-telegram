@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ComponentModule } from './core/components/component.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CurrentUserService } from './core/services/current.user.service';
-import { ComponentModule } from './core/components/component.module';
+import { SharedUiModule } from './shared/ui/shared.ui.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +15,11 @@ import { ComponentModule } from './core/components/component.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ComponentModule
+    ComponentModule,
+    SharedUiModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

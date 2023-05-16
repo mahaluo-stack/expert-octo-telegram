@@ -1,0 +1,57 @@
+.container {
+    width: 60%; 
+    height: 40px;
+    margin: 5vh auto;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+#closed {
+    width: 0%;
+    visibility: hidden;
+}
+
+.sortingIcon {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.5s;
+}
+
+.sortingIcon:hover {
+    opacity: 0.5;
+}
+
+#active {
+    transform: rotate(90deg);
+}
+
+#inactive {
+    transform: rotate(180deg);
+}
+
+.sortingText {
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    margin: auto;
+}
+
+.sortingText:hover {
+    border-bottom: 1px solid white;
+    opacity: 0.5;
+}

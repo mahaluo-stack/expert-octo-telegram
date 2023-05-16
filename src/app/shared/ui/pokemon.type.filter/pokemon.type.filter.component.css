@@ -1,0 +1,63 @@
+.container {
+    width: 60%; 
+    height: 40px;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.filterIcon {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.5s;
+}
+
+.filterIcon:hover {
+    opacity: 0.5;
+}
+
+.typeIcon {
+    max-width: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#active {
+    opacity: 1;
+    height: 120%;
+    width: 120%;
+}
+
+#inactive {
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+}
+
+.typeIcon:hover {
+    opacity: 1 !important;
+    height: 120%;
+    width: 120%;
+}
+
+#closed {
+    width: 0%;
+    visibility: hidden;
+}

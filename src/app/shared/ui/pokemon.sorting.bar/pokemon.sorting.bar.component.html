@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="wrapper" [id]="opened">
+        <p *ngFor="let sortOption of sortOptions" class="sortingText">{{sortOption}}</p>
+    </div>
+    <div class="sortingIcon" (click)="handleToggle()" [id]="active"
+        [style.background-image]="'url(/assets/img/appIcon/sortingIcon.svg)'"></div>
+</div>

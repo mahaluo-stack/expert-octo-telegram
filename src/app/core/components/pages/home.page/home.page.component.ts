@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import pokemonList from '../../../json/pokemon.json'; 
-import { PokemonType } from 'src/app/core/models/interfaces';
 
 @Component({
   selector: 'app-home.page',
@@ -9,13 +7,4 @@ import { PokemonType } from 'src/app/core/models/interfaces';
 })
 export class HomePageComponent {
 
-  pokemonArr: Array<PokemonType> = [];
-
-
-  constructor() {
-    
-    pokemonList.forEach((pokemon: PokemonType) => {
-      pokemon.nonEffective 
-    })
-  }
 }

@@ -1,21 +1,13 @@
-export interface PokemonType {
-    name: string;
-    cp: string;
-    dex: string;
-    hp: string;
-    atk: string;
-    def: string;
-    region: string;
-    
-    types: Array<string>;
-    img: Array<string>;
-    variations: Array<string>;
-    fastMoves: Array<string>;
-    chargeMoves: Array<string>;
-    bestMoves: Array<string>;
+import { Enums } from ".."
 
-    superEffective: { [key: string]: number };
-    resists: { [key: string]: number };
-    nonEffective: { [key: string]: number };
-    weakness: { [key: string]: number };
+export interface PokemonType {
+    [key: string]: {
+        colour: Enums.PokemonTypeColour | any;
+        iconPath: Enums.PokemonTypeIcon | any;
+        name: Enums.PokemonTypeName | any;
+        superEffective: { [key: string]: Enums.DamageMultipliers; } | any;
+        resists: { [key: string]: Enums.DamageMultipliers; } | any;
+        nonEffective: { [key: string]: Enums.DamageMultipliers; } | any;
+        weakness: { [key: string]: Enums.DamageMultipliers; } | any;
+    }
 }

@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="wrapper" [id]="opened">
+        <div *ngFor="let type of typeArr; let i = index" [attr.id]="type.id" class="typeIcon" (click)="handleChange(i)"
+            [style.background-image]="'url('+type.iconPath+')'"></div>
+    </div>
+    <div class="filterIcon" (click)="handleToggle()"
+        [style.background-image]="'url(/assets/img/appIcon/filterIcon.svg)'"></div>
+</div>

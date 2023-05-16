@@ -1,0 +1,45 @@
+.container {
+    width: 60%; 
+    height: 40px;
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchBar {
+    width: calc(100% - 37px);
+    height: 32px;
+    margin-right: 15px;
+    padding: 0 0 0 5px;
+    font-size: 20px;
+    transition: all 0.5s;
+    outline: none;
+}
+
+#closed {
+    width: 0%;
+    visibility: hidden;
+}
+
+.searchIcon {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.5s;
+}
+
+.searchIcon:hover {
+    opacity: 0.5;
+}
+
+.closeIcon {
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
